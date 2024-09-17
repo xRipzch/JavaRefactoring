@@ -21,24 +21,14 @@ public class Main {
         System.out.print("Choose operator (+, -, *, /): ");
         String operator = scanner.next();
 
-        double result;
         // Perform the operation based on the chosen operator
-        switch (operator) {
-            case "+":
-                result = calculator.add(a, b);
-                break;
-            case "-":
-                result = calculator.subtract(a, b);
-                break;
-            case "*":
-                result = calculator.multiply(a, b);
-                break;
-            case "/":
-                result = calculator.divide(a, b);
-                break;
-            default:
-                throw new IllegalArgumentException("Invalid operator: " + operator);
-        }
+        double result = switch (operator) {
+            case "+" -> calculator.add(a, b);
+            case "-" -> calculator.subtract(a, b);
+            case "*" -> calculator.multiply(a, b);
+            case "/" -> calculator.divide(a, b);
+            default -> throw new IllegalArgumentException("Invalid operator: " + operator);
+        };
 
         // Display the result
         System.out.println("Result: " + result);
