@@ -1,10 +1,12 @@
-package src;
+package src.Calc1;
+
+import src.Calc1.Calculator;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        src.Calculator calculator = new src.Calculator();
+        Calculator calculator = new Calculator();
         Scanner scanner = new Scanner(System.in);
 
         // Prompt user for the first number

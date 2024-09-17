@@ -1,4 +1,4 @@
-package src;
+package src.Calc1;
 
 public class Calculator {
 
